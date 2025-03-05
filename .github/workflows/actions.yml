@@ -12,6 +12,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+      - name: Set executable permissions on gradlew
+        run: chmod +x gradlew
       - name: Build and test
         run: |
           export SHELL=/bin/bash
