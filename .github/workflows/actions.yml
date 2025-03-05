@@ -13,13 +13,13 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Build and test
-        working-directory: rentApp
+        working-directory: rent
         run: |
           export SHELL=/bin/bash
           ./gradlew build
       - name: Docker images
-        working-directory: rentApp
+        working-directory: rent
         run: |
           export SHELL=/bin/bash
-          docker build -t rentApp .
+          docker build -t rent .
           docker images
